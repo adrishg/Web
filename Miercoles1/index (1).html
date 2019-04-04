@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FORMULARIOS</title>
+</head>
+<body>
+	<form action="datos.html" target="_self" method="GET" enctype="multipart/form-data"> 
+		<!-- enctype="textplain" -->
+		<!-- _self   o _blank -->
+<!-- Texto -->
+		<input type="text" placeholder="Nombre" name="aquivaelnombre">
+		<label for="email">Correo: </label>
+		<input type="email" name="email">
+		<input type="tel" value="55">
+		<input autofocus="on" type="search">
+		<input type="url">
+		<input type="hidden" value="123123">
+		<input type="password" placeholder="Contraseña">
+		<textarea cols="30" rows="10"></textarea>
+<!-- Números -->
+		<input type="number" min="6" max="20" step="2">
+<!-- FECHAS -->
+	<input name="calendario" type="date">
+	<input type="color" value="#FE7F2D">
+
+	<select>
+		<option value="Opcion1">1</option>
+		<option value="Opcion2">2</option>
+		<optgroup>OPTGROUP</optgroup>
+	</select>
+
+<input list="ListaEjemplo">
+
+	<datalist id="ListaEjemplo">
+		<option value="Opcion1">1</option>
+		<option value="Opcion2">2</option>
+		<option value="Opcion1">1</option>
+		<option value="Opcion2">2</option>
+	</datalist>
+
+
+<input type="file" accept=".pdf,.jpg,.png">
+
+<input type="submit" value="Enviar">
+<input type="reset">
+
+	</form>
+</body>
+</html>
+<!--   
+Preferences>key bindings
+{ "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
+{ "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } }
+
+-->

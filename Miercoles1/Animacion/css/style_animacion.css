@@ -1,0 +1,91 @@
+html{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+}
+body{
+	background-color:grey;
+}
+.pokeball{
+	width: 9rem; /*rem es ajustable al html*/
+	height: 9rem;
+	background-color: white;
+	border: solid 0.5 rem black;
+	border-radius:50%;
+	margin: 6rem auto 2rem auto;
+	animation-name: captura;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-play-state:pause;
+}
+.pokeball::before{
+	content:"";
+	width: 9rem;
+	height: 4.5rem;
+	background-color: red;
+	position:absolute;
+	border-radius: 4.5rem 4.5rem 0 0; 
+}
+
+.detalle{
+	width: 4rem;
+	height: 1rem;
+	background-color:black;
+	position: relative;
+	margin-top: 4rem;
+}
+
+.detalle::before{
+	content:"";
+	width: 4;
+	background-color: white;
+	position: absolute;
+	border: solid 0.5rem black;
+	border-radius: 50]%;
+	margin-top:2rem;
+	margin-left: 3rem;
+	animation-name: parpadeo;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.btn-action{
+	width:4rem;
+	text-align: center;
+	padding: 0.2rem 0.5rem;
+	margin: 0 auto;
+	border: solid 0rem;
+	transition: all 0.2s;
+}
+
+.btn-action:hover{
+	color:white;
+	border: solid white;
+	border-width: 0.5rem;
+	border-radius: 2rem;
+}
+
+.checkbox:checked ~.pokeball{
+	animation-play-state: running;
+}
+.checkbox:checked ~.pokeball::after{
+	animation-play-state: running;
+}
+.checkbox{
+	display:none;
+}
+
+@keyframes captura{
+	0%{
+		transform: translate(0rem) rotate(0deg);
+	}
+	30%{
+		transform: translate(0rem) rotate(50deg); /* X está por defecto */
+	}
+	60%{
+		transform: translate(0rem) rotate(-50deg);
+	}
+	100%{
+		transform: translate(0rem) rotate(0deg);
+	}
+
+}
